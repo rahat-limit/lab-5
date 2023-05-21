@@ -17,4 +17,9 @@ public class BST<K extends Comparable<K>, V>  {
       return "{key: " + this.key + " value: " + this.value + "}";
     }
   }
+  public int getSize() {
+    return size;
+  }
+
+
 }
