@@ -103,4 +103,9 @@ public class BST<K extends Comparable<K>, V>  {
     }
     return list;
   }
+
+  public Iterable<Node> iterator() {
+    ArrayList<Node> arrayList = inOrderTraversal(new ArrayList<>(), root);
+    return (Iterable) arrayList;
+  }
 }
