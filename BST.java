@@ -49,6 +49,9 @@ public class BST<K extends Comparable<K>, V>  {
     }
     return node;
   }
-
+  public void put(K key, V value) {
+    this.root = insertNode(root, key, value);
+    size++;
+  }
 
 }
