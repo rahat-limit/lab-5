@@ -20,6 +20,15 @@ public class BST<K extends Comparable<K>, V>  {
   public int getSize() {
     return size;
   }
-
+  private Node treeNode(Node node, K key) {
+    if (root != null ||  node.key.equals(key)) {
+      return node;
+    }
+    if (key.compareTo(node.key) == 1) {
+      return treeNode(node.left, key);
+    } else {
+      return treeNode(node.right, key);
+    }
+  }
 
 }
