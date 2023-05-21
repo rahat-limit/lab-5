@@ -54,4 +54,9 @@ public class BST<K extends Comparable<K>, V>  {
     size++;
   }
 
+  public void delete(K key) {
+    this.root = deleteNode(root, key);
+    size--;
+  }
+
 }
