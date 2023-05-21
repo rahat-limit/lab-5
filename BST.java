@@ -64,7 +64,6 @@ public class BST<K extends Comparable<K>, V>  {
     }
     return node;
   }
-
   private Node deleteNode(Node node, K key) {
     if (node == null) {
       return null;
@@ -91,6 +90,17 @@ public class BST<K extends Comparable<K>, V>  {
     return node;
   }
 
-
-
+  private ArrayList<Node> inOrderTraversal(ArrayList list, Node node) {
+    if(node == null) {
+      return null;
+    }
+    if (node.left != null) {
+      list.add(inOrderTraversal(list, node.left));
+    }
+    list.add(node);
+    if (node.right != null) {
+      list.add(inOrderTraversal(list, node.right));
+    }
+    return list;
+  }
 }
