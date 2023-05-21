@@ -58,5 +58,11 @@ public class BST<K extends Comparable<K>, V>  {
     this.root = deleteNode(root, key);
     size--;
   }
+  private Node findMinimumNode(Node node) {
+    while (node.left != null) {
+      node = node.left;
+    }
+    return node;
+  }
 
 }
