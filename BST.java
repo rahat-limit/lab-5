@@ -108,4 +108,15 @@ public class BST<K extends Comparable<K>, V>  {
     ArrayList<Node> arrayList = inOrderTraversal(new ArrayList<>(), root);
     return (Iterable) arrayList;
   }
+  public int defineHeight(Node node) {
+    if (node == null) {
+      return 0;
+    } else {
+      return Math.max(defineHeight(node.left), defineHeight(node.right)) + 1;
+    }
+  }
+
+  public int getHeight() {
+    return defineHeight(root);
+  }
 }

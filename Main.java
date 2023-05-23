@@ -1,13 +1,11 @@
+import java.util.Random;
 public class Main {
   public static void main(String[] args) {
     BST<Integer, String> bst = new BST();
-
-    for (int i = 0; i < 12; i++) {
-      bst.put(i, "Val " + i);
+    Random rand = new Random();
+    for (int i = 0; i < 15; i++) {
+      bst.put(rand.nextInt(100), "Val " + i);
     }
-    Iterable it = bst.iterator();
-    for(Object el: it) {
-      System.out.println(el);
-    }
+    System.out.println(bst.getHeight());;
   }
 }
